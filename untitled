@@ -1,0 +1,16 @@
+
+
+https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20130712T190923Z.a2e7430f401fe564.0c45398bb1c49532aee8be7b8bba4043d97410d2&lang=en-ru&text=To+be,+or+not+to+be%3F&text=That+is+the+question.
+
+https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20130712T190923Z.a2e7430f401fe564.0c45398bb1c49532aee8be7b8bba4043d97410d2&ui=uk
+
+
+trnsl.1.1.20130712T190923Z.a2e7430f401fe564.0c45398bb1c49532aee8be7b8bba4043d97410d2
+
+
+https://translate.yandex.net/api/v1.5/tr.json/getLangs?key=trnsl.1.1.20130712T190923Z.a2e7430f401fe564.0c45398bb1c49532aee8be7b8bba4043d97410d2
+
+{"ru":"русский","en":"английский","pl":"польский","uk":"украинский","de":"немецкий","fr":"французский","be":"белорусский","es":"испанский","it":"итальянский","da":"датский","pt":"португальский","nl":"голландский","bg":"болгарский","hr":"хорватский","cs":"чешский","sv":"шведский","tr":"турецкий","ro":"румынский","sr":"сербский"}}
+
+
+<li id="ru">Russian</li>,<li id="en">English</li>,<li id="pl">Polish</li>,<li id="uk">Ukrainian</li>,<li id="de">German</li>,<li id="fr">French</li>,<li id="be">Belarusian</li>,<li id="es">Spanish</li>,<li id="it">Italian</li>,<li id="da">Danish</li>,<li id="pt">Portuguese</li>,<li id="nl">Dutch</li>,<li id="bg">Bulgarian</li>,<li id="hr">Croatian</li>,<li id="cs">Czech</li>,<li id="sv">Swedish</li>,<li id="tr">Turkish</li>,<li id="ro">Romanian</li>,<li id="sr">Serbian</li>
