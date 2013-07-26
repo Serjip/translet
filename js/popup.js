@@ -3,9 +3,6 @@ $(document).ready(function() {
     var fromLang = localStorage.getItem('from');
     var toLang = localStorage.getItem('to');
 
-    $('form').append(fromLang);
-    $('form').append(toLang);
-
     if (fromLang) {
         $("b:first").text(fromLang);
         getLangs(fromLang, toLang);
