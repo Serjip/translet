@@ -99,11 +99,9 @@ function changeLang() {
     localStorage.setItem('from', to);
     localStorage.setItem('to', from);
     getLangs(to, from);
-
 }
 
 function translate() {
-
     var from = $('b:first').text();
     var to = $('b:last').text();
     var text = $('input').first().val();
