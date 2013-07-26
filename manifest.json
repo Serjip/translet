@@ -1,8 +1,8 @@
 {
     "manifest_version": 2,
 
-    "name": "Простой перевод",
-    "version": "1.0",
+    "name": "Translet",
+    "version": "1.0.1",
 
     /*"icons": {
         "16": "16x16.png",
@@ -14,7 +14,7 @@
         ],
 
    "browser_action": {
-      "default_title": "Переводчик",
+      "default_title": "Translet",
       //"default_icon": "48x48.png",
       "default_popup": "popup.html"
     }
