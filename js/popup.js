@@ -13,11 +13,9 @@ $(document).ready(function() {
     $(document).on("click", "ul:first a", function() {
         var lang = $(this).attr("href");
         $(this).parent().parent().parent().find('b').text(lang[1] + lang[2]);
-
         getLangs(lang[1] + lang[2], null);
         localStorage.setItem('from', lang[1] + lang[2]);
     });
-
 
     $(document).on("click", "ul:last a", function() {
         var lang = $(this).attr("href");
@@ -31,7 +29,6 @@ $(document).ready(function() {
     //Translate
     var isCtrl = false;
     $(document).keyup(function(e) {
-
         if (e.which == 17) isCtrl = false;
     }).keydown(function(e) {
 
