@@ -1,18 +1,31 @@
 $(document).ready(function() {
 
-    getLangs("ru");
+    var fromLang = localStorage.getItem('from');
+    var toLang = localStorage.getItem('to');
+
+    $('form').append(fromLang);
+    $('form').append(toLang);
+
+    if (fromLang) {
+        $("b:first").text(fromLang);
+        getLangs(fromLang, toLang);
+    } else {
+        getLangs("ru");
+    }
 
     $(document).on("click", "ul:first a", function() {
         var lang = $(this).attr("href");
         $(this).parent().parent().parent().find('b').text(lang[1] + lang[2]);
 
         getLangs(lang[1] + lang[2], null);
+        localStorage.setItem('from', lang[1] + lang[2]);
     });
 
 
     $(document).on("click", "ul:last a", function() {
         var lang = $(this).attr("href");
         $(this).parent().parent().parent().find('b').text(lang[1] + lang[2]);
+        localStorage.setItem('to', lang[1] + lang[2]);
     });
 
     //Switch
@@ -33,7 +46,6 @@ $(document).ready(function() {
 
         if (code == 17) isCtrl = true;
         if (code == 82 && isCtrl == true) {
-
             changeLang();
             return false;
         }
@@ -84,20 +96,19 @@ function getLangs(lang, checkChoise) {
 
 function changeLang() {
     $('input:first').focus();
+    var from = $("b:first").text();
+    var to = $("b:last").text();
+    $("b:first").text(to);
+    localStorage.setItem('from', to);
+    localStorage.setItem('to', from);
+    getLangs(to, from);
 
-    var first = $("b:first").text();
-    var last = $("b:last").text();
-
-    $("b:first").text(last);
-
-    getLangs(last, first);
 }
 
 function translate() {
 
     var from = $('b:first').text();
     var to = $('b:last').text();
-
     var text = $('input').first().val();
 
     $.getJSON('https://translate.yandex.net/api/v1.5/tr.json/translate?key=trnsl.1.1.20130712T190923Z.a2e7430f401fe564.0c45398bb1c49532aee8be7b8bba4043d97410d2&lang=' + from + '-' + to + '&text=' + text, function(data) {
